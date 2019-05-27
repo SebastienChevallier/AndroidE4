@@ -14,12 +14,9 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
-public interface FraisService {
+public interface medicamentService {
 
-    public static  final String ENDPOINT = "http://192.168.225.121/vial/ProjetWSGsb/public/api/";
-  //  public static  final String ENDPOINT = "http://192.168.0.12/vial/ProjetWSGsb/public/api/";
-  // public static  final String ENDPOINT = "http://192.168.225.121/gsb-frais-ws/index.php/";
- // public static  final String ENDPOINT = "http://192.168.0.12/gsb-frais-ws/index.php/";
+    public static  final String ENDPOINT = "http://192.168.1.26/ProjetWSGsb/ProjetWSGsb";
     // requête d'appel des frais GET
 
 

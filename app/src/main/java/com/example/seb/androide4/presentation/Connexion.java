@@ -13,7 +13,7 @@ import com.example.seb.androide4.MainActivity;
 import com.example.seb.androide4.R;
 import com.example.seb.androide4.mesErreurs.MonException;
 import com.example.seb.androide4.metier.Visiteur;
-import com.example.seb.androide4.service.FraisService;
+import com.example.seb.androide4.service.medicamentService;
 import com.example.seb.androide4.service.RetrofitClient;
 import com.google.gson.JsonSyntaxException;
 
@@ -76,14 +76,14 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
 
     public void controleVisiteur(Visiteur unV) throws MonException{
         boolean retour = false;
-        Retrofit  retrofit = RetrofitClient.getClient(FraisService.ENDPOINT);
+        Retrofit  retrofit = RetrofitClient.getClient(medicamentService.ENDPOINT);
         //
         // On crée un adapteur rest sur l'url
-        FraisService unFraisService = retrofit.create(FraisService.class);
+        medicamentService unMedicamentService = retrofit.create(medicamentService.class);
 
         try {
 
-            Call<Visiteur> call = unFraisService.getConnexion(unV);
+            Call<Visiteur> call = unMedicamentService.getConnexion(unV);
             // appel asynchrone
             call.enqueue(new Callback<Visiteur>() {
 
@@ -122,7 +122,7 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     public int  controleStatique ()
     {
         int retour =0;
-        if (nom.equals("AUCHON"))
+        if (nom.equals("commercial"))
             if (pwd.equals("secret"))
                 retour = MainActivity.RESULT_OK;
              else

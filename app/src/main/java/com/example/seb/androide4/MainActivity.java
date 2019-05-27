@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         txtMessage = (TextView) findViewById(R.id.textMessage);
         txtInfo = (TextView) findViewById(R.id.textInfo);
-        txtInfo.setText("Gestion des frais de déplacement");
-        txtMessage.setText("Vos frais de déplacement en ligne sur votre smartphone");
+        txtInfo.setText("Gestion des Medicaments");
+        txtMessage.setText("Vos medicaments en ligne sur votre smartphone");
         btAuthentifier = (Button) findViewById(R.id.bt_authentifier);
         btAuthentifier.setOnClickListener(this);
         btAppelWS = (Button) findViewById(R.id.btWebService);
