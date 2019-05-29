@@ -9,53 +9,56 @@
 
 
     <TextView
-        android:text="TextView"
+        android:id="@+id/textInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="38dp"
-        android:id="@+id/textInfo"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="25dp"
+        android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
 
     <TextView
-        android:text="TextView"
+        android:id="@+id/textMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textInfo"
         android:layout_alignStart="@+id/textInfo"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="33dp"
-        android:id="@+id/textMessage" />
+        android:text="TextView" />
 
     <Button
-        android:text="Authentification"
+        android:id="@+id/bt_authentifier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:id="@+id/bt_authentifier"
         android:layout_below="@+id/textMessage"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="17dp" />
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="151dp"
+        android:text="Authentification" />
 
     <Button
-        android:text="AppelWS"
+        android:id="@+id/btWebService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btWebService"
-        android:layout_marginStart="21dp"
         android:layout_below="@+id/bt_authentifier"
         android:layout_alignStart="@+id/bt_authentifier"
-        android:layout_marginTop="12dp" />
+        android:layout_marginStart="-83dp"
+        android:layout_marginTop="81dp"
+        android:text="AppelWS" />
 
     <Button
-        android:text="Ajout"
+        android:id="@+id/btAjout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btAjout"
         android:layout_alignBaseline="@+id/btWebService"
         android:layout_alignBottom="@+id/btWebService"
-        android:layout_toEndOf="@+id/bt_authentifier" />
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="-6dp"
+        android:layout_toEndOf="@+id/bt_authentifier"
+        android:text="Ajout" />
 
 
 </RelativeLayout>
