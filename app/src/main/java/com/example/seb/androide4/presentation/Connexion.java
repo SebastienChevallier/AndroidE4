@@ -98,7 +98,7 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
 
                         }
                     } else {
-                        //Toast.makeText(MainActivity.this, "Erreur rencontrée", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Connexion.this, "Erreur rencontrée", Toast.LENGTH_LONG).show();
                         Log.d(TAG, "onResponse =>>> code = " + uneReponse.code());
 
                     }

@@ -16,7 +16,7 @@ import retrofit2.http.POST;
 
 public interface medicamentService {
 
-    public static  final String ENDPOINT = "http://192.168.1.26/ProjetWSGsb/ProjetWSGsb";
+    public static  final String ENDPOINT = "http://192.168.1.26/ProjetWSGsb/public/api/";
     // requête d'appel des frais GET
 
 
