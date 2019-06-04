@@ -42,6 +42,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, Connexion.class);
             startActivityForResult(intent, 1);
         }
+        else if (v == btAppelWS) {
+
+            Intent intent = new Intent(MainActivity.this, AfficheMedicament.class);
+            startActivityForResult(intent,1);
+        }
+        else
+        if (v == btAjout) {// WebServer Request URL
+            appel=true;
+            Intent intent = new Intent(MainActivity.this, SaisieMedicament.class);
+            startActivityForResult(intent,1);
+
+        }
+
+        else {
+            // display error
+            String erreur = "erreur!";
+        }
 
     }
 
