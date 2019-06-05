@@ -14,16 +14,15 @@ import com.example.seb.androide4.metier.Medicaments;
 import java.util.List;
 
 public class ObjectAdapter extends ArrayAdapter<Medicaments> {
-    private int vg;
+
     private List<Medicaments> mesMedics;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public ObjectAdapter(Context context, int vg, List<Medicaments> list){
-        super(context,vg,list);
+    public ObjectAdapter(Context context, int vg, List<Medicaments> mesMedic){
+        super(context,vg,mesMedic);
         this.context = context;
-        this.vg = vg;
-        mesMedics = list;
+        mesMedics = mesMedic;
         layoutInflater = LayoutInflater.from(context);
     }
 
@@ -48,17 +47,17 @@ public class ObjectAdapter extends ArrayAdapter<Medicaments> {
                 LayoutInflater.from(context).inflate(R.layout.affichemedicament, parent, false);
         // Set the text label as defined in our list item
 
-        TextView txtid = (TextView) itemLayout.findViewById(R.id.txtIdMedic);
-        txtid.setText(String.valueOf(item.getId_medicament()));
+        TextView txtidMedic = (TextView) itemLayout.findViewById(R.id.txtIdMedic);
+        txtidMedic.setText(String.valueOf(item.getId_medicament()));
 
-        TextView txtanneemois = (TextView) itemLayout.findViewById(R.id.txtIdFamille);
-        txtanneemois.setText(item.getId_famille());
+        TextView txtIdFamille = (TextView) itemLayout.findViewById(R.id.txtIdFamille);
+        txtIdFamille.setText(String.valueOf(item.getId_famille()));
 
-        TextView txtidetat = (TextView) itemLayout.findViewById(R.id.txtNomCommercial);
-        txtidetat.setText(String.valueOf(item.getNom_commercial()));
+        TextView txtNomCommercial = (TextView) itemLayout.findViewById(R.id.txtNomCommercial);
+        txtNomCommercial.setText(item.getNom_commercial());
 
-        TextView txtidvisiteur = (TextView) itemLayout.findViewById(R.id.txtPrix);
-        txtidvisiteur.setText(String.valueOf(item.getPrix_echantillon()));
+        TextView txtPrix = (TextView) itemLayout.findViewById(R.id.txtPrix);
+        txtPrix.setText(String.valueOf(item.getPrix_echantillon()));
 
         return itemLayout;
 

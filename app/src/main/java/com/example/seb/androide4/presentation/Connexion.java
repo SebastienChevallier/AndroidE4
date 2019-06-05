@@ -31,6 +31,7 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     private EditText txtNom;
     private EditText txtPwd;
     private Button btValider;
+    private Button btRetour;
     private String nom;
     private String pwd;
     private static final String TAG = "Connexion";
@@ -45,6 +46,8 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
         txtPwd = (EditText) findViewById(R.id.edt_pwd);
         btValider = (Button) findViewById(R.id.bt_valider);
         btValider.setOnClickListener(this);
+        btRetour = (Button) findViewById(R.id.bt_annuler);
+        btRetour.setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +65,7 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
           try {
               controleVisiteur(unV);
               retour = MainActivity.RESULT_OK;
+
           }
           catch ( MonException e)
           {
@@ -71,6 +75,14 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
             setResult(retour, intent);
             startActivityForResult(intent, 1);
 
+        }if(v == btRetour){
+            try {
+                Intent inte = new Intent(this, MainActivity.class);
+                startActivity(inte);
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
     }
 
@@ -116,21 +128,6 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
         } catch (Exception e) {
             new MonException(e.getMessage(), "Erreur Appel WS Modification");
         }
-    }
-
-
-    public int  controleStatique ()
-    {
-        int retour =0;
-        if (nom.equals("commercial"))
-            if (pwd.equals("secret"))
-                retour = MainActivity.RESULT_OK;
-             else
-                retour = MainActivity.BIND_ABOVE_CLIENT;
-         else
-            retour = MainActivity.RESULT_CANCELED;
-
-        return retour;
     }
 
 

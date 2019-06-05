@@ -32,8 +32,8 @@
 
         <activity
             android:name=".presentation.AfficheMedicament"
-            android:label="@string/app_connexion"
-            android:screenOrientation="portrait">
+            android:label="@string/affiche_medicament"
+            android:screenOrientation="landscape">
             ">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,53 +5,12 @@
 
 
     <TextView
-        android:id="@+id/txtIdMedic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="52dp"
-        android:text="Id Medic" />
-
-    <TextView
-        android:id="@+id/txtIdFamille"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/txtIdMedic"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="0dp"
-        android:text="Id Famille" />
-
-    <TextView
-        android:id="@+id/txtNomCommercial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/txtIdMedic"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="309dp"
-        android:layout_marginTop="0dp"
-        android:text="Nom Medicament" />
-
-    <TextView
-        android:id="@+id/txtPrix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/txtIdMedic"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="76dp"
-        android:text="Prix" />
-
-    <TextView
         android:id="@+id/txtnom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtIdMedic"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="13dp"
-        android:text="Liste des medicaments" />
+        android:layout_marginTop="13dp" />
 
     <ListView
         android:id="@+id/ListViewMedic"

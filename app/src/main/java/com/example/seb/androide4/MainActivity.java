@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btAppelWS.setOnClickListener(this);
         btAjout = (Button) findViewById(R.id.btAjout);
         btAjout.setOnClickListener(this);
+
     }
 
     public void onClick(View v) {
@@ -48,13 +49,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (v == btAppelWS) {
 
             Intent intent = new Intent(MainActivity.this, AfficheMedicament.class);
-            startActivityForResult(intent,2);
+            startActivityForResult(intent,1);
         }
         else
         if (v == btAjout) {// WebServer Request URL
             appel=true;
             Intent intent = new Intent(MainActivity.this, SaisieMedicament.class);
-            startActivityForResult(intent,3);
+            startActivityForResult(intent,1);
 
         }
 
@@ -78,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // on rend l'appel au Web service accessible
                     btAppelWS = (Button) findViewById(R.id.btWebService);
                     btAppelWS.setOnClickListener(this);
+                    btAjout = (Button) findViewById(R.id.btAjout);
+                    btAjout.setOnClickListener(this);
                     break;
                 }
                 case  MainActivity.RESULT_CANCELED   :{

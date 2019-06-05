@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtIdMedic"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="id Medic"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/txtIdFamille"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:text="Id Famille"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/txtNomCommercial"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:text="Nom Commercial"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/txtPrix"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="Prix"
+        android:textAlignment="center" />
+
+</LinearLayout>
+
