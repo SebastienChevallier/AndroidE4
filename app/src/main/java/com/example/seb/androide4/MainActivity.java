@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.seb.androide4.presentation.AfficheMedicament;
 import com.example.seb.androide4.presentation.Connexion;
+import com.example.seb.androide4.presentation.SaisieMedicament;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtMessage;
@@ -45,13 +48,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (v == btAppelWS) {
 
             Intent intent = new Intent(MainActivity.this, AfficheMedicament.class);
-            startActivityForResult(intent,1);
+            startActivityForResult(intent,2);
         }
         else
         if (v == btAjout) {// WebServer Request URL
             appel=true;
             Intent intent = new Intent(MainActivity.this, SaisieMedicament.class);
-            startActivityForResult(intent,1);
+            startActivityForResult(intent,3);
 
         }
 

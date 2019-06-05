@@ -45,9 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bt_authentifier"
         android:layout_alignStart="@+id/bt_authentifier"
-        android:layout_marginStart="-83dp"
-        android:layout_marginTop="81dp"
-        android:text="AppelWS" />
+        android:layout_marginStart="-107dp"
+        android:layout_marginTop="92dp"
+        android:text="Afficher les Medicaments" />
 
     <Button
         android:id="@+id/btAjout"
@@ -58,7 +58,7 @@
         android:layout_marginStart="-34dp"
         android:layout_marginBottom="-1dp"
         android:layout_toEndOf="@+id/bt_authentifier"
-        android:text="Ajout" />
+        android:text=" Ajout d'un medicament" />
 
 
 </RelativeLayout>

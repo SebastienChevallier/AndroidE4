@@ -5,6 +5,7 @@ package com.example.seb.androide4.service;
  */
 
 import com.example.seb.androide4.metier.FicheFrais;
+import com.example.seb.androide4.metier.Medicaments;
 import com.example.seb.androide4.metier.Visiteur;
 
 import java.util.List;
@@ -25,6 +26,8 @@ public interface medicamentService {
     @GET("frais/listeFrais/1")
     Call<List<FicheFrais>> getFicheFrais();
 
+    @GET("medicament/listeMedic")
+    Call<List<Medicaments>> getMedic();
 
  // requête de contrôle d'un visiteur
  @POST("getConnexion")
