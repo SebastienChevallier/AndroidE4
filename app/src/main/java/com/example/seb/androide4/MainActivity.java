@@ -3,7 +3,6 @@ package com.example.seb.androide4;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import com.example.seb.androide4.R;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.seb.androide4.presentation.AfficheMedicament;
 import com.example.seb.androide4.presentation.Connexion;
-import com.example.seb.androide4.presentation.SaisieMedicament;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
