@@ -5,107 +5,79 @@
 
 
     <TextView
-        android:text="Etat :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/textView11"
-        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView6"
         android:layout_alignBottom="@+id/edPrix"
-        android:layout_alignEnd="@+id/textView6" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="13dp"
+        android:text="Prix"
+        android:textSize="18sp" />
 
     <TextView
-        android:text="Suppression d'un Frais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"
-        android:layout_marginStart="37dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/textView6" />
-
-    <TextView
-        android:text="date Modification :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/textView6"
-        android:textSize="18sp"
-        android:layout_alignBottom="@+id/edNomCommercial" />
-
-    <TextView
-        android:text="Montant Validé :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edNomCommercial"
+        android:layout_marginBottom="18dp"
+        android:text="Nom Commercial"
+        android:textSize="18sp" />
+
+    <TextView
         android:id="@+id/textView9"
-        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/edNomCommercial"
-        android:layout_alignEnd="@+id/textView6" />
+        android:layout_alignEnd="@+id/textView6"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="25dp"
+        android:text="id Famille"
+        android:textSize="18sp" />
 
     <TextView
-        android:text="nb Justificatifs :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/textView10"
-        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/edIdMedicament"
+        android:layout_alignEnd="@+id/textView9"
         android:layout_alignBottom="@+id/edIdMedicament"
-        android:layout_alignEnd="@+id/textView9" />
-
-    <TextView
-        android:text="Année Mois :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/test6"
-        android:textSize="18sp"
-        android:layout_alignTop="@+id/edtAnneeMois"
-        android:layout_alignEnd="@+id/textView10" />
+        android:text="id Medicament"
+        android:textSize="18sp" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/edtIdVisiteur"
-        android:layout_above="@+id/edtAnneeMois"
-        android:layout_alignStart="@+id/edtAnneeMois" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/edtAnneeMois"
-        android:layout_above="@+id/edIdMedicament"
-        android:layout_alignStart="@+id/edIdMedicament" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:id="@+id/edIdMedicament"
-        android:layout_above="@+id/edIdFamille"
-        android:layout_alignStart="@+id/edIdFamille" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
+        android:layout_above="@+id/edIdFamille"
+        android:layout_alignStart="@+id/edIdFamille"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="32dp"
         android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/edIdFamille"
-        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView9"
         android:layout_alignBottom="@+id/textView9"
-        android:layout_toEndOf="@+id/textView9" />
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="6dp"
+        android:layout_toEndOf="@+id/textView9"
+        android:ems="10"
+        android:inputType="numberDecimal" />
 
     <EditText
+        android:id="@+id/edNomCommercial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/edNomCommercial"
         android:layout_above="@+id/edPrix"
-        android:layout_alignStart="@+id/edIdFamille" />
+        android:layout_alignStart="@+id/edIdFamille"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="date" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -115,15 +87,6 @@
         android:id="@+id/edPrix"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/edNomCommercial" />
-
-    <TextView
-        android:text="Id Visiteur :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView8"
-        android:textSize="18sp"
-        android:layout_alignTop="@+id/edtIdVisiteur"
-        android:layout_alignEnd="@+id/test6" />
 
     <Button
         android:text="Supprimer"
@@ -142,13 +105,13 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="TextView"
+        android:id="@+id/tvNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
         android:layout_marginStart="34dp"
-        android:id="@+id/tvNumero" />
+        android:layout_toEndOf="@+id/textView"
+        android:text="TextView" />
 
 
 </RelativeLayout>

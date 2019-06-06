@@ -3,4 +3,7 @@
     <string name="activity_main">MainActivity</string>
     <string name="app_connexion">Connexion</string>
     <string name="affiche_medicament">AfficheMedicament</string>
+    <string name="saisie_medicament">SaisieMedicament</string>
+    <string name="supprime_medicament">SupprimeMedicament</string>
+    <string name="modif_medicament">ModifMedicament</string>
 </resources>
