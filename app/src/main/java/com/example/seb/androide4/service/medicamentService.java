@@ -22,19 +22,28 @@ public interface medicamentService {
 
 
 
-  // @GET("getListeFicheFrais/1")
-    @GET("frais/listeFrais/1")
-    Call<List<FicheFrais>> getFicheFrais();
+
 
     @GET("medicament/listeMedic")
     Call<List<Medicaments>> getMedic();
 
+    @POST("medicament/insertion")
+    Call<Medicaments>  postMedic(@Body Medicaments medic);
+    @POST("medicament/updateMedic")
+    Call<Medicaments> updateMedic(@Body Medicaments medic);
+
+    // requête de suppression
+    @POST("medicament/deleteMedic")
+    Call<Medicaments> deleteMedic(@Body Medicaments medic);
+
  // requête de contrôle d'un visiteur
- @POST("getConnexion")
- Call<Visiteur> getConnexion(@Body Visiteur unV) ;
+    @POST("getConnexion")
+    Call<Visiteur> getConnexion(@Body Visiteur unV) ;
 
 // requête d'ajout
-
+// @GET("getListeFicheFrais/1")
+    @GET("frais/listeFrais/1")
+    Call<List<FicheFrais>> getFicheFrais();
     @POST("frais/addFicheFrais")
     Call<FicheFrais>  postFicheFrais(@Body FicheFrais ff);
 

@@ -1,9 +1,12 @@
 package com.example.seb.androide4.presentation;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -55,6 +58,7 @@ public class AfficheMedicament extends AppCompatActivity {
         super.onStart();
     }
 
+
     public void loadMedic(){
         Retrofit  retrofit = RetrofitClient.getClient(medicamentService.ENDPOINT);
 
@@ -63,37 +67,38 @@ public class AfficheMedicament extends AppCompatActivity {
 
 
 
-            Call<List<Medicaments>> call = unMedicamentService.getMedic();
-            // appel asynchrone
-            call.enqueue(new Callback<List<Medicaments>>() {
-                @Override
-                public void onResponse(Call<List<Medicaments>> call, Response<List<Medicaments>> uneReponse) {
-                    Toast.makeText(AfficheMedicament.this, "Asynchrone en cour", Toast.LENGTH_LONG).show();
-                    if (uneReponse.isSuccessful()) {
-                        //Recupérer le corps de la reponse que Retrofit s'est chargé de désérialiser à notre place l'aide du convertor Gson
-                        if (uneReponse.body() != null) {
-                            mesMedics = uneReponse.body();
-                            Toast.makeText(AfficheMedicament.this, "traitement en cour", Toast.LENGTH_LONG).show();
-                            affiche(mesMedics);
-                        } else {
-                            Toast.makeText(AfficheMedicament.this, "Erreur d'appel!", Toast.LENGTH_LONG).show();
-                        }
+        Call<List<Medicaments>> call = unMedicamentService.getMedic();
+        // appel asynchrone
+        call.enqueue(new Callback<List<Medicaments>>() {
+            @Override
+            public void onResponse(Call<List<Medicaments>> call, Response<List<Medicaments>> uneReponse) {
+                Toast.makeText(AfficheMedicament.this, "Asynchrone en cour", Toast.LENGTH_LONG).show();
+                if (uneReponse.isSuccessful()) {
+                    //Recupérer le corps de la reponse que Retrofit s'est chargé de désérialiser à notre place l'aide du convertor Gson
+                    if (uneReponse.body() != null) {
+                        mesMedics = uneReponse.body();
+                        Toast.makeText(AfficheMedicament.this, "traitement en cour", Toast.LENGTH_LONG).show();
+                        affiche(mesMedics);
                     } else {
-                        Toast.makeText(AfficheMedicament.this, "Erreur rencontrée", Toast.LENGTH_LONG).show();
-                        Log.d(TAG, "onResponse =>>> code = " + uneReponse.code());
-
+                        Toast.makeText(AfficheMedicament.this, "Erreur d'appel!", Toast.LENGTH_LONG).show();
                     }
-                }
+                } else {
+                    Toast.makeText(AfficheMedicament.this, "Erreur rencontrée", Toast.LENGTH_LONG).show();
+                    Log.d(TAG, "onResponse =>>> code = " + uneReponse.code());
 
-                @Override
-                public void onFailure(Call<List<Medicaments>> call, Throwable t) {
-                    Toast.makeText(AfficheMedicament.this, t.toString(), Toast.LENGTH_LONG).show();
-                    t.printStackTrace();
-                    call.cancel();
                 }
+            }
 
-            });
+            @Override
+            public void onFailure(Call<List<Medicaments>> call, Throwable t) {
+                Toast.makeText(AfficheMedicament.this, t.toString(), Toast.LENGTH_LONG).show();
+                t.printStackTrace();
+                call.cancel();
+            }
+
+        });
     }
+
 
     protected void affiche(List<Medicaments> result){
         ListView listViewData = (ListView) findViewById(R.id.ListViewMedic);
@@ -119,6 +124,20 @@ public class AfficheMedicament extends AppCompatActivity {
                     listViewData.addHeaderView(header, null, false);
                 final ObjectAdapter adapter = new ObjectAdapter(AfficheMedicament.this, android.R.layout.simple_list_item_1, mesMedics);
                 listViewData.setAdapter(adapter);
+
+                listViewData.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Medicaments unMedoc = mesMedics.get(position - 1); // on récupère l'objet selectionné
+                        // action
+                        Intent intent = new Intent(AfficheMedicament.this, ModifSupMedic.class);
+                        intent.putExtra("uneFiche", unMedoc);
+                        setResult(MainActivity.RESULT_FIRST_USER, intent);
+                        startActivityForResult(intent, 1);
+
+                    }
+                });
             }
         }
     }
