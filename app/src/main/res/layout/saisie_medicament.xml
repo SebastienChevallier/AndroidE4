@@ -45,7 +45,7 @@
         android:layout_marginStart="-2dp"
         android:layout_marginBottom="0dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/textView"
@@ -111,7 +111,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginBottom="26dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/edNomCommercial"
@@ -122,7 +122,7 @@
         android:layout_marginStart="-1dp"
         android:layout_marginBottom="15dp"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="text" />
 
 
 </RelativeLayout>

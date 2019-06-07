@@ -44,11 +44,11 @@ public class ObjectAdapter extends ArrayAdapter<Medicaments> {
         final Medicaments item = mesMedics.get(position);
         // Get the layout for the list item
         final LinearLayout itemLayout = (LinearLayout)
-                LayoutInflater.from(context).inflate(R.layout.affichemedicament, parent, false);
+                LayoutInflater.from(context).inflate(R.layout.header, parent, false);
         // Set the text label as defined in our list item
 
         TextView txtidMedic = (TextView) itemLayout.findViewById(R.id.txtIdMedic);
-        txtidMedic.setText(String.valueOf(item.getId_medicament()));
+        txtidMedic.setText(Integer.toString(item.getId_medicament()));
 
         TextView txtIdFamille = (TextView) itemLayout.findViewById(R.id.txtIdFamille);
         txtIdFamille.setText(String.valueOf(item.getId_famille()));

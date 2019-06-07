@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.seb.androide4.presentation.AfficheMedicament;
 import com.example.seb.androide4.presentation.Connexion;
+import com.example.seb.androide4.presentation.SaisieMedicament;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == 1) {
             switch (resultCode) {
                 case MainActivity.RESULT_OK: {

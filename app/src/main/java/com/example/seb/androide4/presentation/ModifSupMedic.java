@@ -153,6 +153,14 @@ public class ModifSupMedic extends AppCompatActivity implements View.OnClickList
                         })
                         .show();
             }
+        }if(v == btAnnuler){
+            try {
+                Intent inte = new Intent(this, MainActivity.class);
+                startActivity(inte);
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
 
         else

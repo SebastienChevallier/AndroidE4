@@ -132,7 +132,7 @@ public class AfficheMedicament extends AppCompatActivity {
                         Medicaments unMedoc = mesMedics.get(position - 1); // on récupère l'objet selectionné
                         // action
                         Intent intent = new Intent(AfficheMedicament.this, ModifSupMedic.class);
-                        intent.putExtra("uneFiche", unMedoc);
+                        intent.putExtra("unMedic", unMedoc);
                         setResult(MainActivity.RESULT_FIRST_USER, intent);
                         startActivityForResult(intent, 1);
 

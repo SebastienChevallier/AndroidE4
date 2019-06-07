@@ -27,6 +27,9 @@ public interface medicamentService {
     @GET("medicament/listeMedic")
     Call<List<Medicaments>> getMedic();
 
+    @GET("medicament/getUnMedic/{id}")
+    Call<List<Medicaments>> getUnMedic(@Body int id);
+
     @POST("medicament/insertion")
     Call<Medicaments>  postMedic(@Body Medicaments medic);
     @POST("medicament/updateMedic")
