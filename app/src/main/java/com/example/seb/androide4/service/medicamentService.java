@@ -32,11 +32,11 @@ public interface medicamentService {
 
     @POST("medicament/insertion")
     Call<Medicaments>  postMedic(@Body Medicaments medic);
-    @POST("medicament/updateMedic")
+    @POST("medicament/validate")
     Call<Medicaments> updateMedic(@Body Medicaments medic);
 
     // requête de suppression
-    @POST("medicament/deleteMedic")
+    @POST("medicament/suppression")
     Call<Medicaments> deleteMedic(@Body Medicaments medic);
 
  // requête de contrôle d'un visiteur

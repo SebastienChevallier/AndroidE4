@@ -243,7 +243,7 @@ public class ModifSupMedic extends AppCompatActivity implements View.OnClickList
                 }
                 @Override
                 public void onFailure(Call<Medicaments> call, Throwable t) {
-                    Toast.makeText(ModifSupMedic.this, "Erreur d'appel suppression !", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ModifSupMedic.this, "Impossible de supprimer de la base de donnée", Toast.LENGTH_LONG).show();
                 }
             });
         }

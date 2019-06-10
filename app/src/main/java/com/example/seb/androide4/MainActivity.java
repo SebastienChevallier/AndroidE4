@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.seb.androide4.presentation.AfficheMedicament;
 import com.example.seb.androide4.presentation.Connexion;
@@ -36,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btAppelWS.setOnClickListener(this);
         btAjout = (Button) findViewById(R.id.btAjout);
         btAjout.setOnClickListener(this);
-
     }
 
     public void onClick(View v) {
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        Toast.makeText(MainActivity.this, "On arrive dans le onResult ", Toast.LENGTH_SHORT).show();
         if (requestCode == 1) {
             switch (resultCode) {
                 case MainActivity.RESULT_OK: {
@@ -81,6 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     btAppelWS.setOnClickListener(this);
                     btAjout = (Button) findViewById(R.id.btAjout);
                     btAjout.setOnClickListener(this);
+                    btAuthentifier.setVisibility(View.INVISIBLE);
+                    Toast.makeText(MainActivity.this, "On arrive dans le resultok ", Toast.LENGTH_SHORT).show();
                     break;
                 }
                 case  MainActivity.RESULT_CANCELED   :{
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Bouton cliqué, on affiche
-                                    //  Toast.makeText(MainActivity.this, "Il faut saisir des données ", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this, "Il faut saisir des données ", Toast.LENGTH_SHORT).show();
                                 }
                             })
                             .show();
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Bouton cliqué, on affiche
-                                    //  Toast.makeText(MainActivity.this, "Il faut saisir des données ", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this, "Il faut saisir des données ", Toast.LENGTH_SHORT).show();
                                 }
                             })
                             .show();
@@ -120,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Bouton cliqué, on affiche
-                                    //  Toast.makeText(MainActivity.this, "Il faut saisir des données ", Toast.LENGTH_SHORT).show();
+                                     Toast.makeText(MainActivity.this, "Il faut saisir des données ", Toast.LENGTH_SHORT).show();
                                 }
                             })
                             .show();

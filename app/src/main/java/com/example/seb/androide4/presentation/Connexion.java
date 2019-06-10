@@ -65,7 +65,6 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
           try {
               controleVisiteur(unV);
               retour = MainActivity.RESULT_OK;
-
           }
           catch ( MonException e)
           {

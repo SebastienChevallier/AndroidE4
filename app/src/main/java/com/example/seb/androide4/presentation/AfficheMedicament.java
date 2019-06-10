@@ -72,12 +72,10 @@ public class AfficheMedicament extends AppCompatActivity {
         call.enqueue(new Callback<List<Medicaments>>() {
             @Override
             public void onResponse(Call<List<Medicaments>> call, Response<List<Medicaments>> uneReponse) {
-                Toast.makeText(AfficheMedicament.this, "Asynchrone en cour", Toast.LENGTH_LONG).show();
                 if (uneReponse.isSuccessful()) {
                     //Recupérer le corps de la reponse que Retrofit s'est chargé de désérialiser à notre place l'aide du convertor Gson
                     if (uneReponse.body() != null) {
                         mesMedics = uneReponse.body();
-                        Toast.makeText(AfficheMedicament.this, "traitement en cour", Toast.LENGTH_LONG).show();
                         affiche(mesMedics);
                     } else {
                         Toast.makeText(AfficheMedicament.this, "Erreur d'appel!", Toast.LENGTH_LONG).show();
@@ -103,7 +101,6 @@ public class AfficheMedicament extends AppCompatActivity {
     protected void affiche(List<Medicaments> result){
         ListView listViewData = (ListView) findViewById(R.id.ListViewMedic);
         String data = "";
-        Toast.makeText(AfficheMedicament.this, "On est dans le traitement affiche", Toast.LENGTH_LONG).show();
         TextView txtnom = (TextView) findViewById(R.id.txtnom);
         ProgressDialog Dialog = new ProgressDialog(AfficheMedicament.this);
         String Error = null;
